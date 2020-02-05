@@ -10,14 +10,24 @@
 </head>
 
 <body>
-    <section class="input">
-        <input type="text" placeholder="Enter active business name" id="companySearch" />
+    <section>
+        <h2>Dropdown Search</h2>
+        <div class="dropdown">
+            <select id="dropdown-btn">
+                <option id ="business--btn" value="businesses">Businesses</option>
+                <option id ="city--btn" value="city">City Name</option>
+                <option id="industry--btn" value="industry">Industry</option>
+                <option id="agent--btn" value="agent">Agent Name</option>
+              </select>
+              </div>
+    </section>
+<!--
+<section>
         <input type="text" placeholder="Enter city name" id="city-Search" />
         <input type="text" placeholder="Enter industry name" id="industry-Search" />
         <input type="text" placeholder="Enter agent name" id="purchasing-agent-search" />
-
     </section>
-
+-->
     <section class="output">
         <div id="active-businesses"></div>
         <div id="by-city"></div>
@@ -25,7 +35,7 @@
         <div id="purchasing-agent"></div>
     </section>
 
-    <script type="module" src="src/scripts/main.js"></script>
+    <script type="module" src="src/scripts/challenge.js"></script>
 </body>
 
 </html>
