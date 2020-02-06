@@ -1,5 +1,5 @@
-import businesses from "../../api/data.js";
-//import eventManager from "./eventManager.js"
+// import businesses from "../../api/data.js";
+// //import eventManager from "./eventManager.js"
 
 const activeEl = document.querySelector("#active-businesses");
 activeEl.innerHTML += "<h1>Active Businesses</h1>";
@@ -29,8 +29,7 @@ const newYorkBusinesses = businesses.filter(business => {
 
 const cityEl = document.querySelector("#by-city");
 cityEl.innerHTML += `<h1>NY Businesses</h1>`;
-newYorkBusinesses.forEach(business => {
-  // callbck business holding the arrays returned from newYorkBusinesses function
+newYorkBusinesses.forEach(business => {  // callback business holding the arrays returned from newYorkBusinesses function
   cityEl.innerHTML += `
     <h2>${business.companyName}</h2>
     <section>
@@ -70,12 +69,12 @@ manufacturingBusinesses.forEach(business => {
   manufacturingEl.innerHTML += "<hr/>";
 });
 
-/*
-    Using map(), you extract the purchasing agent object
-    from each business and store it in a new array
-*/
+// /*
+//     Using map(), you extract the purchasing agent object
+//     from each business and store it in a new array
+// */
 
-// returns new array of purchasing agents...after ligtening exercise agentObj now holds vale of entire object.
+// // returns new array of purchasing agents...after ligtening exercise agentObj now holds vale of entire object.
 
 const agents = businesses.map(agentObj => {
   return agentObj;
