@@ -6,11 +6,8 @@ const byCity = document.querySelector("#by-city");
 const byIndustry = document.querySelector("#manufacturing");
 const byAgent = document.querySelector("#purchasing-agent");
 
-//const category = document.getElementById("dropdown-btn").value;
-
 // functions that hold html what will be rendered to dom. These are the "factories".
 const businessSelectOutputFunction = category => {
-    return
   category.innerHTML += "<h1>Active Businesses</h1>";
   businesses.forEach(business => {
     category.innerHTML += `
@@ -29,7 +26,6 @@ const businessSelectOutputFunction = category => {
 };
 
 const citySelectOutputFunction = category => {
-    return
   category.innerHTML += `<h1>Businesses By State</h1>`;
   businesses.forEach(business => {
     category.innerHTML += `
@@ -51,7 +47,6 @@ const citySelectOutputFunction = category => {
 };
 
 const industrySelectOutputFunction = category => {
-    return
   category.innerHTML += `<h1>Businesses By Industry</h1>`;
   businesses.forEach(business => {
     category.innerHTML += `
@@ -71,7 +66,6 @@ const industrySelectOutputFunction = category => {
 };
 
 const agentSelectOutputFunction = category => {
-    return
   category.innerHTML += "<h1>Purchasing Agents</h1>";
   businesses.forEach(business => {
     byAgent.innerHTML += `
@@ -87,13 +81,10 @@ const agentSelectOutputFunction = category => {
 // write logic that specifies which cat was clicked...if btn.value === "businesses" fire that etc...
 
 // function to handle rendering the selection to the dom. Will eventally call this with a select "factory".
-const renderSelection = (selectionHTML) => {
-    const outputContainer = document.querySelector(".output");
-    outputContainer.innerHTML += selectionHTML
+const renderSelection = selectionHTML => {
+  const outputContainer = document.querySelector(".output");
+  outputContainer.innerHTML += selectionHTML;
 };
-
-
-
 
 // this function responsible for logic when user clicks the businesses option on drop down. Calls businessSelectOutputFunction to render html structure to DOM
 const businessSelect = () => {
@@ -143,7 +134,6 @@ const addDropDownEventListener = () => {
   dropdownButton.addEventListener("click", industrySelect);
   dropdownButton.addEventListener("click", agentSelect);
 };
-
 
 addDropDownEventListener();
 
